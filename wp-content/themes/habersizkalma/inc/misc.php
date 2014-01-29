@@ -439,7 +439,7 @@ class CategoryColors_Walker extends Walker_Category {
         endwhile; else: endif;
 
 
-			  $output .= '<a href="'.get_category_link($child->term_id).'" class="gotocategory" title="'.$child->name.'">View all</a>';
+			  $output .= '<a href="'.get_category_link($child->term_id).'" class="gotocategory" title="'.$child->name.'">Tümünü Görüntüle</a>';
 			  $output .= "</div>";
 			  $i++;
 			}

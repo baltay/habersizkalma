@@ -42,7 +42,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Re-usable styles */
 .ubuntu, .btn,
-input[type=submit], label, #subheader, #mobile-menu, #header, #nav, #nav nav > ul > li .category-holder > ul li a, #nav nav > ul > li .category-holder .category-children > div .gotocategory, #breaking h3, #breaking .item .type, #breadcrumbs, .carousel .post.back .post-title .readmore, #recentnews #loadmore, .post .post-title aside, .post .post-gallery .imagetag, .post .post-meta ul li, .post .post-content h4, .post .post-content h6, .post .single-meta .author strong, .post .single-meta .meta-list, [class^="tag-link"], .headline h2, .categoryheadline h2, .categoryheadline span, .archiveheadline h1, .pagenavi ul li a, .pagenavi .pages, .widget h6, .widget h6.force, .widget.widget_calendar table, .widget.widget_socialcounter, .widget.widget_latestreviews li aside, .sharethispost .sharenow, .label, .wp-caption .wp-caption-text, #endpage-box aside a, table, .seperator > h6, .tabs, ul.accordion > li > div.title h5, .toggle .title, div.notification-box h6, [data-hint]:after, #comments .headline a, #comments #reply-title, #comments ol.commentlist .commentmeta strong, #comments ol.commentlist .commentmeta .authorname, #comments ol.commentlist .comment-reply-link, #footer, #subfooter, #author-page strong a {
+input[type=submit], label, #subheader, #mobile-menu, #header, #nav, #nav nav > ul > li .category-holder > ul li a, #nav nav > ul > li .category-holder .category-children > div .gotocategory, #breaking h3, #breaking .item .type, #breadcrumbs, .carousel .post.back .post-title .readmore, #recentnews #loadmore, .post .post-title aside, .post .post-gallery .imagetag, .post .post-meta ul li, .post .post-content h4, .post .post-content h6, .post .single-meta .author strong, .post .single-meta .meta-list, [class^="tag-link"], .headline h2, .categoryheadline h2, .categoryheadline span, .archiveheadline h1, .pagenavi ul li a, .pagenavi .pages, .widget h6, .widget h6.force, .widget.widget_calendar table, .widget.widget_socialcounter, .widget.widget_latestreviews li aside, .sharethispost .sharenow, .sharethispost .btn-face-share, .label, .wp-caption .wp-caption-text, #endpage-box aside a, table, .seperator > h6, .tabs, ul.accordion > li > div.title h5, .toggle .title, div.notification-box h6, [data-hint]:after, #comments .headline a, #comments #reply-title, #comments ol.commentlist .commentmeta strong, #comments ol.commentlist .commentmeta .authorname, #comments ol.commentlist .comment-reply-link, #footer, #subfooter, #author-page strong a {
   font-family: 'Ubuntu', sans-serif;
   font-weight: 400;
 }
@@ -478,6 +478,7 @@ label span {
 }
 
 #subheader {
+  display: none;
   background: #222222;
   height: 50px;
   line-height: 50px;
@@ -661,6 +662,8 @@ label span {
 
 /* Header */
 #header {
+  display: none;
+  /*extended*/
   padding: 45px 0;
   text-transform: uppercase;
   color: gray;
@@ -743,6 +746,17 @@ label span {
 }
 #nav nav {
   width: 100%;
+}
+#nav nav .logo h3 {
+  display: inline-block;
+  float: left;
+}
+@media only screen and (max-width: 940px) {
+  #nav nav .logo h3 {
+    visibility: hidden;
+    height: 0;
+    width: 0;
+  }
 }
 #nav nav > ul {
   list-style: none;
@@ -1512,10 +1526,10 @@ label span {
   transition: all 0.4s ease-in-out;
 }
 .single-post .post .post-gallery, .blog .post .post-gallery {
-  margin-bottom: 30px;
+  /*margin-bottom: 30px;*/
 }
 .relatedposts .post .post-gallery {
-  margin-bottom: 20px;
+  /*margin-bottom: 20px;*/
 }
 .post .post-meta {
   color: gray;
@@ -2416,6 +2430,21 @@ label span {
 }
 .sharethispost .sharenow i {
   margin-left: 20px;
+}
+.sharethispost .btn-face-share {
+  background: #3b579d url(../img/ico-fb.png) no-repeat 4px 3px;
+  border-radius: 3px;
+  font-size: 11px;
+  color: #fff;
+  padding: 0 6px 0 20px;
+  line-height: 20px;
+  margin-right: 15px !important;
+  width: 150px;
+  display: inline;
+  float: left;
+}
+.sharethispost .btn-face-share a {
+  color: #fff;
 }
 .sharethispost .placeholder {
   overflow: hidden;

@@ -384,6 +384,7 @@ label {
 	}
 }
 #subheader {
+	display: none;
 	background: $color1;
 	height: 50px;
 	line-height: 50px;
@@ -578,6 +579,7 @@ label {
 }
 /* Header */
 #header {
+	display: none;/*extended*/
 	padding: 45px 0;
 	text-transform: uppercase;
 	color: $color2;
@@ -670,6 +672,19 @@ label {
 	nav {
 		width: 100%;
 		
+		.logo{
+			h3{
+				display: inline-block;
+				float: left;
+
+				@media only screen and (max-width: $break-medium) {
+		   			visibility: hidden;
+			        height: 0;
+			        width: 0;
+				}
+			}
+		}
+
 		&>ul {
 			list-style: none;
 			height: 60px;
@@ -1432,11 +1447,11 @@ position: relative;
 		}
 		.single-post &,
 		.blog & {
-			margin-bottom: 30px;
+			/*margin-bottom: 30px;*/
 		}
 		
 		.relatedposts & {
-			margin-bottom: 20px;
+			/*margin-bottom: 20px;*/
 		}
 	}
 	.post-meta {
@@ -2403,6 +2418,27 @@ position: relative;
 			margin-left: 20px;
 		}
 	}
+
+	.btn-face-share{
+		background: #3b579d url(../img/ico-fb.png) no-repeat 4px 3px;
+		border-radius: 3px;
+		font-size: 11px;
+		color: #fff;
+		padding: 0 6px 0 20px;
+		line-height: 20px;
+		margin-right: 15px !important;
+		width: 150px;
+		display: inline;
+		float:left;
+		@extend .ubuntu;
+
+		a{
+			color: #fff;
+		}
+	}
+
+
+
 	.placeholder {
 		overflow: hidden;
 	}

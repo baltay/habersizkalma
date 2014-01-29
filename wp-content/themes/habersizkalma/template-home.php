@@ -27,7 +27,7 @@ Template Name: Home Page - Style 1
 							<div class="post-title">
 							<aside><?php echo thb_DisplaySingleCategory(); ?></aside>
 							<h2><a href="<?php the_permalink() ?>" rel="bookmark"><?php echo ShortenText(get_the_title(), 50); ?></a></h2>
-							<?php echo thb_DisplayPostMeta(true,true,false, false); ?>
+							<?php echo thb_DisplayPostMeta(false,false,false, false); ?>
 						</div>
 					</div>
 					
@@ -39,7 +39,7 @@ Template Name: Home Page - Style 1
 						<div class="post-content">
 							<p><?php echo ShortenText(get_the_excerpt(), 50); ?></p>
 							<a class="readmore" href="<?php the_permalink() ?>"><?php _e( 'Devamı', THB_THEME_NAME ); ?></a>
-							<?php echo thb_DisplayPostMeta(true,true,false,false); ?>
+							<?php echo thb_DisplayPostMeta(false,false,false,false); ?>
 						</div>
 					</div>
 					
@@ -67,7 +67,7 @@ Template Name: Home Page - Style 1
 					<div class="post-title">
 						<aside><?php echo thb_DisplaySingleCategory(); ?></aside>
 						<h2><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h2>
-						<?php echo thb_DisplayPostMeta(true,true,false,false); ?>
+						<?php echo thb_DisplayPostMeta(false,false,false,false); ?>
 					</div>
 				</li>
 				<?php endwhile; else: ?>
@@ -103,7 +103,7 @@ Template Name: Home Page - Style 1
 						</div>
 						<div class="post-content">
 							<p><?php echo ShortenText(get_the_excerpt(), 150); ?></p>
-							<?php echo thb_DisplayPostMeta(true,true,false,false); ?>
+							<?php echo thb_DisplayPostMeta(false,false,false,false); ?>
 						</div>
 					</div>
 				</div>
@@ -148,7 +148,7 @@ Template Name: Home Page - Style 1
 										</div>
 										<div class="post-content">
 											<p><?php echo ShortenText(get_the_excerpt(), 150); ?></p>
-											<?php echo thb_DisplayPostMeta(true,true,false,false); ?>
+											<?php echo thb_DisplayPostMeta(false,false,false,false); ?>
 										</div>
 									</article>
 								<?php } else { ?>
@@ -159,7 +159,7 @@ Template Name: Home Page - Style 1
 											</div>
 											<div class="post-title mobile-three left">
 												<h2><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h2>
-												<?php echo thb_DisplayPostMeta(true,true,false,false); ?>
+												<?php echo thb_DisplayPostMeta(false,false,false,false); ?>
 											</div>
 										</article>
 									</div>

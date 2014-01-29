@@ -148,6 +148,7 @@
 	<div class="row">
 		<div class="twelve columns">
 			<nav>
+				<div class="logo"><h3><a href="/">HABERSİZ KALMA</a></h3></div>
 				<ul class="mega-menu">
 					<?php
 						wp_list_categories(

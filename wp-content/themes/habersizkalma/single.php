@@ -32,14 +32,12 @@
 		  		?>
 		  	</ul>
 		  	<aside id="sharethispost" class="sharethispost cf hide-on-print">
-				
+				<div class="btn-face-share"><a href="#">Facebook'ta Paylaş</a></div>
 				<!-- AddThis Button BEGIN -->
 				<div class="addthis_toolbox addthis_default_style" style="height:200px;">
 				<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
 				<a class="addthis_button_tweet"></a>
 				<a class="addthis_button_pinterest_pinit" pi:pinit:layout="horizontal"></a>
-				<a class="addthis_button_google_plusone"></a>
-				<a class="addthis_button_preferred_1"></a>
 				<a class="addthis_counter addthis_pill_style"></a>
 				</div>
 				<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>

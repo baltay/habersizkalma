@@ -13,7 +13,7 @@
 	<!-- Start Related Posts -->
 	<?php global $post; 
 		    $postId = $post->ID;
-		    $query = get_blog_posts_related_by_taxonomy($post->ID,array(),10); ?>
+		    $query = get_blog_posts_related_by_taxonomy($post->ID); ?>
 	<?php if ($query->have_posts()) : ?>
 		<div class="headline hide-on-print">
 			<h2>

@@ -13,7 +13,7 @@ function get_blog_posts_related_by_taxonomy($post_id, $args=array()) {
 	    'tag__in' => $tagIDs,
 	    'post__not_in' => array($post_id),
 	    'ignore_sticky_posts'=> 1,
-	  	'showposts' => 3,
+	  	'showposts' => 10,
 	  	'no_found_rows' => true
 	  ));
 	  $query = new WP_Query($args);
@@ -35,7 +35,7 @@ function get_posts_related_by_taxonomy($post_id,$taxonomy,$args=array()) {
       'post__not_in' => $post_id,
       'taxonomy' => $taxonomy,
       'term' => $terms[0]->slug,
-	  	'showposts' => 3,
+	  	'showposts' => 10,
 	  	'no_found_rows' => true
     ));
     $query = new WP_Query($args);

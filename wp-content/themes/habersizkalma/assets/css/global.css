@@ -1,0 +1,14 @@
+
+.rightreleated{
+    max-width: 200px;
+    margin: 0 auto;
+}
+
+span.authorname{
+	font-weight: bold;
+	font-size: 14px;
+}
+
+.owl-wrapper-outer {
+	height: 354px;
+}

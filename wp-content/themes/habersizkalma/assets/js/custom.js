@@ -19,5 +19,12 @@ jQuery(document).ready(function(){
         //console.log(bigSpan2.attr("data-url"));
         window.open('https://www.facebook.com/sharer/sharer.php?m2w&s=100&p[title]=' + encodeURIComponent(newShareTitle) + '&p[summary]=' + encodeURIComponent(summaryShare) + '&p[url]=' + encodeURIComponent(window.location.href) + '&p[images][0]=' + encodeURIComponent(img), 'facebookShareDialog', 'width=650,height=450'); return false;
     });
+
+
+    mobileSliderBar = new jQuery.slidebars();
+    jQuery("#mobileicon").click(function(){
+        mobileSliderBar.toggle('left');
+    });
+
    
 });

@@ -740,6 +740,20 @@ label span {
   margin-left: 13px;
 }
 
+.mobile-sidebar .mobile-cat-wrapper {
+  background-color: #c9c9c9;
+}
+.mobile-sidebar .mobile-cat-wrapper li.cat-item {
+  margin-left: 10px;
+  list-style-type: none;
+  line-height: 50px;
+}
+.mobile-sidebar .mobile-cat-wrapper li .children .cat-item {
+  margin-left: 10px;
+  list-style-type: none;
+  line-height: 50px;
+}
+
 #nav {
   background: #efefef;
   height: 60px;
@@ -747,15 +761,29 @@ label span {
 #nav nav {
   width: 100%;
 }
+#nav nav #mobileicon {
+  display: none;
+}
+@media only screen and (max-width: 940px) {
+  #nav nav #mobileicon {
+    color: #000000;
+    font-size: 22px;
+    display: inline-block;
+    margin: 15px 0 0 0;
+    float: left;
+    cursor: pointer;
+  }
+}
 #nav nav .logo h3 {
   display: inline-block;
   float: left;
 }
 @media only screen and (max-width: 940px) {
   #nav nav .logo h3 {
-    visibility: hidden;
-    height: 0;
-    width: 0;
+    width: 90px;
+    text-align: center;
+    font-size: 19px;
+    margin-left: 40%;
   }
 }
 #nav nav > ul {
@@ -766,6 +794,13 @@ label span {
   margin: 0;
   border-top: 4px solid #dfdfdf;
   text-align: center;
+}
+@media only screen and (max-width: 940px) {
+  #nav nav > ul {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+  }
 }
 #nav nav > ul > li {
   display: inline-block;

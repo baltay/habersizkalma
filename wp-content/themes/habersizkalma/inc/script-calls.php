@@ -11,6 +11,7 @@ function main_styles() {
 		 wp_register_style("ie8", get_template_directory_uri() . "/assets/css/ie8.css");
 		 wp_register_style("mp", get_template_directory_uri() . "/assets/css/magnific-popup.css");
  		 wp_register_style("global", get_stylesheet_directory_uri() . "/assets/css/global.css");
+ 		 wp_register_style("slidebars", get_stylesheet_directory_uri() . "/assets/css/slidebars.min.css");
 		 
 		 // Enqueue
 		 wp_enqueue_style('foundation'); 
@@ -20,6 +21,7 @@ function main_styles() {
 		 wp_enqueue_style('ie8'); 
 		 wp_enqueue_style('mp'); 
 		 wp_enqueue_style('global'); 
+		 wp_enqueue_style('slidebars'); 
 		 
 		 //IE 
 		 global $wp_styles;
@@ -52,6 +54,7 @@ function register_js() {
 		wp_register_script('marquee', get_template_directory_uri() . '/assets/js/jquery.marquee.min.js', 'jquery', null, TRUE);
 		wp_register_script('app', get_template_directory_uri() . '/assets/js/app.js', 'jquery', null, TRUE);
 		wp_register_script('custom', get_template_directory_uri() . '/assets/js/custom.js', 'jquery', null, TRUE);
+		wp_register_script('slidebars', get_template_directory_uri() . '/assets/js/slidebars.min.js', 'jquery', null, TRUE);
 		
 		// Enqueue
 		wp_enqueue_script('modernizr');
@@ -66,6 +69,7 @@ function register_js() {
 		wp_enqueue_script('marquee');
 		wp_enqueue_script('app');
 		wp_enqueue_script('custom');		
+		wp_enqueue_script('slidebars');		
 	}
 }
 add_action('init', 'register_js');

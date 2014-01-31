@@ -664,6 +664,32 @@ label {
 		}
 	}
 }
+
+
+
+.mobile-sidebar{
+	.mobile-cat-wrapper{
+		background-color: #c9c9c9;
+		li{
+			&.cat-item{
+				margin-left: 10px;
+				list-style-type: none;
+				line-height: 50px;
+			}	
+
+
+			.children{
+				.cat-item{
+					margin-left: 10px;
+					list-style-type: none;
+					line-height: 50px;
+				}	
+			}
+		}
+
+	}
+}
+
 #nav {
 	background: $color3;
 	height: 60px;
@@ -672,20 +698,41 @@ label {
 	nav {
 		width: 100%;
 		
+		#mobileicon{
+			display: none;
+			@media only screen and (max-width: $break-medium) {
+					color: #000000;
+					font-size: 22px;
+					display: inline-block;
+					margin: 15px 0 0 0;	
+					float: left;
+					cursor: pointer;
+				}
+		}
+
 		.logo{
 			h3{
 				display: inline-block;
 				float: left;
 
 				@media only screen and (max-width: $break-medium) {
-		   			visibility: hidden;
-			        height: 0;
-			        width: 0;
+		   			width: 90px;
+					text-align: center;
+					font-size: 19px;
+					margin-left: 40%;
 				}
 			}
 		}
 
 		&>ul {
+
+			@media only screen and (max-width: $break-medium) {
+		   			visibility:hidden;
+		   			width: 0;
+		   			height: 0;
+				}
+
+
 			list-style: none;
 			height: 60px;
 			width: 100%;

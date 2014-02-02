@@ -121,7 +121,7 @@
 <header id="header">
 	<div class="row">
 		<div class="four columns hide-for-small">
-			<?php do_action('thb_weather'); ?>
+			<?php //do_action('thb_weather'); ?>
 		</div>
 		<div class="four columns logo">
 			<?php if (ot_get_option('logo_text') == 'yes') { ?>

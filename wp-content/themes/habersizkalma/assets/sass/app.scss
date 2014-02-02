@@ -702,7 +702,7 @@ label {
 			display: none;
 			@media only screen and (max-width: $break-medium) {
 					color: #000000;
-					font-size: 22px;
+					font-size: 41px;
 					display: inline-block;
 					margin: 15px 0 0 0;	
 					float: left;
@@ -714,12 +714,15 @@ label {
 			h3{
 				display: inline-block;
 				float: left;
+				font-size: 21px;
+				line-height: 35px;
 
 				@media only screen and (max-width: $break-medium) {
 		   			width: 90px;
 					text-align: center;
 					font-size: 19px;
 					margin-left: 40%;
+					line-height: 19px;
 				}
 			}
 		}
@@ -1696,7 +1699,7 @@ position: relative;
 		width: auto;
 		left: 40px;
 		right: auto;
-		top: 92%;
+		top: 90%;
 		z-index: 99;
 		
 		@media only screen and (max-width: $break-small) {

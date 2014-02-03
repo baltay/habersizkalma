@@ -13,7 +13,7 @@
 		    get_template_part( 'inc/postformats/standard' );
 		    }
 		  ?>
-		  <div class="post-title">
+		  <div class="post-title single">
 		  	<aside><?php echo thb_DisplaySingleCategory(true); ?></aside>
 		  	<h1><?php the_title(); ?></h1>
 		  </div>

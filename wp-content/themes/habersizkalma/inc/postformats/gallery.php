@@ -1,6 +1,6 @@
 <?php $image_id = get_post_thumbnail_id();
 			$image_url = wp_get_attachment_image_src($image_id,'full'); $image_url = $image_url[0]; ?>
-<div class="post-gallery flex-start flex" data-after="afterCallback" data-startat="<?php echo intval($_GET['i'])==0 ? 0 : intval($_GET['i'])-1; ?>">
+<div class="post-gallery flex-start flex galleryFlex" data-after="afterCallback" data-startat="<?php echo intval($_GET['i'])==0 ? 0 : intval($_GET['i'])-1; ?>">
 	<ul class="slides">
 	<?php 
 			$attachments = get_post_meta($post->ID, 'pp_gallery_slider', TRUE);

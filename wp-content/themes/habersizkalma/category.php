@@ -2,7 +2,7 @@
 <div class="row">
 	<section class="nine columns">
 		<?php if(!is_paged()) { ?>
-			<div id="slider" class="flex slider flex-start categoryslider" data-bullets="true" data-controls="true">
+			<div id="slider" class="flex slider flex-start categoryslider galleryFlex" data-bullets="true" data-controls="true">
 			<ul class="slides">
 				<?php global $query_string; // required
 							$args = array_merge( $wp_query->query_vars, array( 'posts_per_page' => '5' ) );

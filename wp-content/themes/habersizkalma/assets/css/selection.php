@@ -19,7 +19,7 @@
 					array_push($fontlist, $otfontfamily);
 					if ($otfontfamily) {
 						$cssfont = str_replace(' ', '+', $otfontfamily);
-						$import = '@import "'.$fontbase.$cssfont .':200,300,400,400italic,600,700";';
+						$import = '@import "'.$fontbase.$cssfont .':200,300,400,400italic,600,700&subset=latin,latin-ext";';
 		
 						return $import;
 					}
@@ -88,7 +88,7 @@
 	}
 	echo google_webfont('logo_type') . "\n";
 	echo google_webfont('post_title_type') . "\n";
-	echo google_webfont('body_type', 'Merriweather') . "\n";
+	echo google_webfont('body_type', 'PT+Sans+Narrow') . "\n";
 	echo google_webfont('menu_type') . "\n";
 	echo google_webfont('submenu_type') . "\n";
 	echo google_webfont('widget_title_type') . "\n";

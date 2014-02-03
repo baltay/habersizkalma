@@ -1379,6 +1379,12 @@ position: relative;
 		}
 	}
 	.post-title {
+
+		&.single{
+			margin-top: 25px;
+		}
+
+
 		h1 {
 			
 			font-size: 36px;
@@ -1690,6 +1696,12 @@ position: relative;
 		min-height: 200px;
 		background: #2c2c2c url('../img/flex-preloader.gif') center center no-repeat;
 	}
+
+	&.galleryFlex{
+		width: 600px;
+		margin: 0 auto;
+	}
+
 	&.categoryslider {
 		margin-bottom: 30px;
 	}

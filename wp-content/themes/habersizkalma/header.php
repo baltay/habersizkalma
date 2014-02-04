@@ -27,61 +27,6 @@
 </head>
 <body <?php body_class($class); ?> data-url="<?php echo home_url(); ?>">
 <div id="wrapper">
-<!-- Start Subheader -->
-<div id="subheader">
-	<div class="row">
-		<div class="eight columns hide-for-small">
-			<?php if(has_nav_menu('top-menu')) { ?>
-			  <?php wp_nav_menu( array( 'theme_location' => 'top-menu', 'depth' => 3, 'container' => false, 'menu_class' => 'sf-menu'  ) ); ?>
-			<?php } else { ?>
-				<ul>
-					<li><a href="">No menu assigned!</a></li>
-				</ul>
-			<?php } ?>
-		</div>
-		<div class="eight mobile-one columns show-for-small">
-			<i class="fa fa-reorder" id="mobile-toggle"></i>
-		</div>
-		<div class="four mobile-three columns social">
-			<?php if (ot_get_option('fb_link')) { ?>
-			<a href="<?php echo ot_get_option('fb_link'); ?>" class="boxed-icon facebook icon-1x rounded"><i class="fa fa-facebook"></i></a>
-			<?php } ?>
-			<?php if (ot_get_option('pinterest_link')) { ?>
-			<a href="<?php echo ot_get_option('pinterest_link'); ?>" class="boxed-icon pinterest icon-1x rounded"><i class="fa fa-pinterest"></i></a>
-			<?php } ?>
-			<?php if (ot_get_option('twitter_link')) { ?>
-			<a href="<?php echo ot_get_option('twitter_link'); ?>" class="boxed-icon twitter icon-1x rounded"><i class="fa fa-twitter"></i></a>
-			<?php } ?>
-			<?php if (ot_get_option('googleplus_link')) { ?>
-			<a href="<?php echo ot_get_option('googleplus_link'); ?>" class="boxed-icon google-plus icon-1x rounded"><i class="fa fa-google-plus"></i></a>
-			<?php } ?>
-			<?php if (ot_get_option('linkedin_link')) { ?>
-			<a href="<?php echo ot_get_option('linkedin_link'); ?>" class="boxed-icon linkedin icon-1x rounded"><i class="fa fa-linkedin"></i></a>
-			<?php } ?>
-			<?php if (ot_get_option('instragram_link')) { ?>
-			<a href="<?php echo ot_get_option('instragram_link'); ?>" class="boxed-icon instagram icon-1x rounded"><i class="fa fa-instagram"></i></a>
-			<?php } ?>
-			<?php if (ot_get_option('xing_link')) { ?>
-			<a href="<?php echo ot_get_option('xing_link'); ?>" class="boxed-icon xing icon-1x rounded"><i class="fa fa-xing"></i></a>
-			<?php } ?>
-			<?php if (ot_get_option('tumblr_link')) { ?>
-			<a href="<?php echo ot_get_option('tumblr_link'); ?>" class="boxed-icon tumblr icon-1x rounded"><i class="fa fa-tumblr"></i></a>
-			<?php } ?>
-		</div>
-	</div>
-</div>
-<!-- End Subheader -->
-<!-- Start Mobile Menu -->
-<div id="mobile-menu">
-	<?php if(has_nav_menu('top-menu')) { ?>
-	  <?php wp_nav_menu( array( 'theme_location' => 'top-menu', 'depth' => 3, 'container' => false ) ); ?>
-	<?php } else { ?>
-		<ul class="sf-menu">
-			<li><a href="">No menu assigned!</a></li>
-		</ul>
-	<?php } ?>
-</div>
-<!-- End Mobile Menu -->
 <!-- Start Header -->
 <?php if (isset($_GET['header_style'])) { $header_style = htmlspecialchars($_GET['header_style']); } else { $header_style = ''; }  ?>
 <?php if(ot_get_option('header_style', 'style2') == 'style2' || $header_style == 'style2' ) {  ?>

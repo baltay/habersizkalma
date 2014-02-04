@@ -188,7 +188,7 @@
 							
 					container.find('>li:not(.smallmenu)').each(function(){
 						widthSum += $(this).outerWidth(true);
-						if (widthSum + smallMenuWidth > containerWidth)
+						if (widthSum + smallMenuWidth > containerWidth-200)
 							$(this).hide();
 						else
 							$(this).show();

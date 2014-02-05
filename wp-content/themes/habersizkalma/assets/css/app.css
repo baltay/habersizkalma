@@ -1761,11 +1761,8 @@ label span {
   margin-bottom: 30px;
 }
 .flex .flex-control-nav {
-  bottom: auto;
   height: 40px;
-  width: auto;
-  left: 40px;
-  right: auto;
+  width: 100%;
   top: 90%;
   z-index: 99;
 }
@@ -1778,9 +1775,6 @@ label span {
   margin: 0 5px 0 0;
 }
 .flex .flex-control-nav.flex-control-paging li a {
-  width: 12px;
-  height: 12px;
-  background: transparent;
   border: 3px solid rgba(255, 255, 255, 0.4);
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
@@ -1790,13 +1784,18 @@ label span {
   text-indent: -1px;
   color: #fff;
   line-height: 27px;
-  width: 34px;
-  height: 34px;
+  width: 55px;
+  height: 40px;
   font-weight: bold;
 }
 .flex .flex-control-nav.flex-control-paging li a.flex-active {
   background: #fff;
   color: #000;
+}
+.flex .flex-control-nav.flex-control-paging li a img {
+  border-radius: 20px;
+  margin-left: 1px;
+  height: 34px;
 }
 .flex .flex-direction-nav {
   z-index: 100;

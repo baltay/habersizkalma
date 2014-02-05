@@ -49,10 +49,10 @@ Template Name: Home Page - Style 1
 		</div>
 	</section>
 	<section class="seven columns">
-		<div id="slider" class="flex slider flex-start" data-bullets="true" data-controls="true">
+		<div id="slider" class="flex slider flex-start homePageFlex" data-bullets="true" data-controls="true">
 			<ul class="slides">
 				<?php $args = array(
-				  	   'posts_per_page' => '8',
+				  	   'posts_per_page' => '18',
 				  	   'ignore_sticky_posts' => '1',
 				  	   'no_found_rows' => true,
 				  	   'tag' => 'anamanset'

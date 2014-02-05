@@ -1568,7 +1568,7 @@ position: relative;
 		}
 	}
 	.post-content {
-		font-size: 14px;
+		font-size: 18px;
 		
 		ul, ol, dl {
 			list-style-position: inside;
@@ -1695,6 +1695,12 @@ position: relative;
 		overflow: hidden;
 		min-height: 200px;
 		background: #2c2c2c url('../img/flex-preloader.gif') center center no-repeat;
+	}
+
+	&.homePageFlex{
+		@media only screen and (max-width: $break-small) {
+			display: none;
+		}
 	}
 
 	&.galleryFlex{

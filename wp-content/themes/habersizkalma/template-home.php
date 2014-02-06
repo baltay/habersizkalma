@@ -52,7 +52,7 @@ Template Name: Home Page - Style 1
 		<div id="slider" class="flex slider flex-start homePageFlex" data-bullets="true" data-controls="true">
 			<ul class="slides">
 				<?php $args = array(
-				  	   'posts_per_page' => '10',
+				  	   'posts_per_page' => '16',
 				  	   'ignore_sticky_posts' => '1',
 				  	   'no_found_rows' => true,
 				  	   'tag' => 'anamanset'

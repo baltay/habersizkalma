@@ -26,11 +26,12 @@ jQuery(document).ready(function(){
         mobileSliderBar.toggle('left');
     });
 
+    /*
     setTimeout(function(){
-        jQuery(".homePageFlex .slides li:not(.clone) .post-gallery a img").each(function(i,x){
+        jQuery(".slides li:not(.clone) .post-gallery a img").each(function(i,x){
             jQuery(".flex-control-nav.flex-control-paging li a").eq(i).html(jQuery(x).clone());
         });
     },1000)
-        
+    */
    
 });

@@ -29,7 +29,6 @@ class widget_latestcategory extends WP_Widget {
 							 $color = GetCategoryColor($category);
 							 $isfirst = false;
                echo $before_widget; ?>
-               
                <h6 style="border-color: <?php echo $color; ?>"><?php echo $cat->name; ?></h6>
                <?php while  ($pop->have_posts()) : $pop->the_post(); ?>
 	               <div class="post">

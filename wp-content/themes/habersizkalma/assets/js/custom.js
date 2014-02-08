@@ -28,10 +28,10 @@ jQuery(document).ready(function(){
 
     /*
     setTimeout(function(){
-        jQuery(".slides li:not(.clone) .post-gallery a img").each(function(i,x){
+        jQuery(".homePageFlex .slides li:not(.clone) .post-gallery a img").each(function(i,x){
             jQuery(".flex-control-nav.flex-control-paging li a").eq(i).html(jQuery(x).clone());
         });
     },1000)
-    */
+    */  
    
 });

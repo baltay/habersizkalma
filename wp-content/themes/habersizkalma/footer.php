@@ -93,7 +93,7 @@
 				<p><?php echo ot_get_option('copyright','HABERSİZKALMA 2013'); ?> </p>
 				</div>
 				<div class="eight columns">
-					<?php //wp_nav_menu( array( 'theme_location' => 'footer-menu', 'depth' => 1, 'container' => false) ); ?>
+					<?php wp_nav_menu( array( 'theme_location' => 'footer-menu', 'depth' => 1, 'container' => false) ); ?>
 				</div>
 			</div>
 		</section>

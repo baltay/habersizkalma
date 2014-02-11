@@ -988,7 +988,7 @@ label {
 			margin-right: 25px;
 		}
 		a {
-			font-size: 21px;
+			font-size: 17px;
 			color: #fff;
 		}
 		.type {
@@ -1261,7 +1261,7 @@ position: relative;
 		margin-bottom: 7px;
 	}
 	.post .post-content p{
-		font-size: 15px;
+		font-size: 17px;
 		line-height: 22px;
 	}
 	.post {
@@ -2121,10 +2121,15 @@ position: relative;
 				}
 			}
 		}
-		.iconlist a:hover {
-			color: inherit;
-			text-decoration: underline;
-			font-size: 15px;
+		.iconlist {
+			a{
+				color: inherit;
+				font-size: 16px;	
+				&:hover{
+					text-decoration: underline;
+				}
+			}
+			
 		}
 	}
 	&.widget_latestcategory {

@@ -8,10 +8,9 @@
 					<div class="marquee-wrapper">
 						<div class="marquee" id="marquee">
 							<?php $args = array(
-							  	   'orderby'=>'menu_order',
+							  	   'orderby'=>'date',
 							  	   'order'     => 'DESC',
-							  	   'posts_per_page' => '6',
-							  	   'tag__in' => ot_get_option('breaking_news')
+							  	   'posts_per_page' => '16',
 								  	);
 							?>
 							<?php $query = new WP_Query($args); ?>

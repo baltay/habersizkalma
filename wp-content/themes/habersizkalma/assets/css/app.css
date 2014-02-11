@@ -1040,7 +1040,7 @@ label span {
   margin-right: 25px;
 }
 #breaking .item a {
-  font-size: 21px;
+  font-size: 17px;
   color: #fff;
 }
 #breaking .item .type {
@@ -1339,7 +1339,7 @@ label span {
   margin-bottom: 7px;
 }
 #recentnews .post .post-content p {
-  font-size: 15px;
+  font-size: 17px;
   line-height: 22px;
 }
 #recentnews .post {
@@ -2147,10 +2147,12 @@ label span {
   color: inherit;
   text-decoration: underline;
 }
-.widget.widget_latestimages .iconlist a:hover, .widget.widget_latestcategory .iconlist a:hover, .widget.widget_topnewsbycategory .iconlist a:hover {
+.widget.widget_latestimages .iconlist a, .widget.widget_latestcategory .iconlist a, .widget.widget_topnewsbycategory .iconlist a {
   color: inherit;
+  font-size: 16px;
+}
+.widget.widget_latestimages .iconlist a:hover, .widget.widget_latestcategory .iconlist a:hover, .widget.widget_topnewsbycategory .iconlist a:hover {
   text-decoration: underline;
-  font-size: 15px;
 }
 .widget.widget_latestcategory .post {
   margin-bottom: 20px;

@@ -316,7 +316,7 @@
 							animation: "slide",
 							directionNav: controls,
 							controlNav: bullets,
-							animationSpeed: 100,
+							animationSpeed: 0,
 							useCSS: false,
 							startAt: startIndex,
 							prevText: '<i class="fa fa-angle-left"></i>',
@@ -345,9 +345,9 @@
 							autoplay = (that.data('autoplay') === false ? false : true),
 							pagination = (that.data('pagination') === true ? true : false);
 					
-					that.owlCarousel({
-            //Basic Speeds
-            slideSpeed : 1200,
+					that.owlCarousel(
+{            //Basic Speeds
+            slideSpeed : 0,
             
             //Autoplay
             autoPlay : autoplay,

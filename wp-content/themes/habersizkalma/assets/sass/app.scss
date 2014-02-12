@@ -711,18 +711,19 @@ label {
 		}
 
 		.logo{
-			h3{
+			.img{
 				display: inline-block;
 				float: left;
 				font-size: 21px;
-				line-height: 35px;
-
+				margin-top: 21px;
+				background-image: url("../img/logo.jpg");
+				height: 28px;
+				width: 207px;
 				@media only screen and (max-width: $break-medium) {
-		   			width: 90px;
 					text-align: center;
 					font-size: 19px;
-					margin-left: 40%;
-					line-height: 19px;
+					margin-left: 25%;
+					margin-top: 19px;
 				}
 			}
 		}

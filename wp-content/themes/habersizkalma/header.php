@@ -130,7 +130,7 @@
 			<nav>
 				<span class="fa fa-reorder" id="mobileicon">
 				</span>
-				<div class="logo"><h3><a href="/">HABERSİZ KALMA</a></h3></div>
+				<div class="logo"><a href="/"><div class="img"></div></a></div>
 				<ul class="mega-menu">
 					<?php
 						wp_list_categories(

@@ -1465,6 +1465,11 @@ label span {
   color: inherit;
   text-decoration: underline;
 }
+@media only screen and (max-width: 767px) {
+  .post .post-title h1 {
+    font-size: 22px;
+  }
+}
 .post .post-title h2 {
   line-height: 24px;
   margin-bottom: 15px;

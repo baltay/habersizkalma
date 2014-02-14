@@ -1398,6 +1398,9 @@ position: relative;
 					text-decoration: underline;
 				}
 			}
+			@media only screen and (max-width: $break-small) {
+				font-size: 22px;
+			}
 		}
 		h2 {
 			line-height: 24px;

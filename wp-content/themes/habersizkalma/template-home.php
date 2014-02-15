@@ -10,7 +10,7 @@ Template Name: Home Page - Style 1
 		<div id="featured" class="carousel owl row" data-columns="4" data-navigation="true" data-autoplay="false">
 			<?php $args = array(
 			  	   'order'     => 'DESC',
-			  	   'posts_per_page' => '10',
+			  	   'posts_per_page' => '12',
 			  	   'tag__in' => ot_get_option('featured_news')
 				  	);
 			?>
@@ -52,7 +52,7 @@ Template Name: Home Page - Style 1
 		<div id="slider" class="flex slider flex-start homePageFlex" data-bullets="true" data-controls="true">
 			<ul class="slides">
 				<?php $args = array(
-				  	   'posts_per_page' => '16',
+				  	   'posts_per_page' => '18',
 				  	   'ignore_sticky_posts' => '1',
 				  	   'no_found_rows' => true,
 				  	   'tag' => 'anamanset'

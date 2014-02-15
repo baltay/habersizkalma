@@ -27,6 +27,19 @@
 </head>
 <body <?php body_class($class); ?> data-url="<?php echo home_url(); ?>">
 <div id="wrapper">
+
+
+<div id="subheader">
+	<div class="row">
+		<div class="four columns hide-for-small">
+			<div class="doviz">
+				asdasdasdasd
+			</div>
+		</div>
+	</div>
+	
+</div>
+
 <!-- Start Header -->
 <?php if (isset($_GET['header_style'])) { $header_style = htmlspecialchars($_GET['header_style']); } else { $header_style = ''; }  ?>
 <?php if(ot_get_option('header_style', 'style2') == 'style2' || $header_style == 'style2' ) {  ?>
@@ -121,7 +134,6 @@
 	</div>
 	
 </div>
-
 
 <!-- Start Navigation -->
 <div id="nav">

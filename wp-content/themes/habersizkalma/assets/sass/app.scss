@@ -384,9 +384,9 @@ label {
 	}
 }
 #subheader {
-	display: none;
+	display: block;
 	background: $color1;
-	height: 50px;
+	height: 40px;
 	line-height: 50px;
 	@extend .ubuntu;
 	
@@ -1398,6 +1398,9 @@ position: relative;
 					text-decoration: underline;
 				}
 			}
+			@media only screen and (max-width: $break-small) {
+				font-size: 22px;
+			}
 		}
 		h2 {
 			line-height: 24px;
@@ -1499,12 +1502,10 @@ position: relative;
 			
 		}
 		img {
-			width: 100%;
 			@include single-transition(all, 0.4s, ease-in-out);
 		}
 		.single-post &,
 		.blog & {
-			/*margin-bottom: 30px;*/
 		}
 		
 		.relatedposts & {

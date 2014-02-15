@@ -478,9 +478,9 @@ label span {
 }
 
 #subheader {
-  display: none;
+  display: block;
   background: #222222;
-  height: 50px;
+  height: 40px;
   line-height: 50px;
 }
 #subheader ul {
@@ -1465,6 +1465,11 @@ label span {
   color: inherit;
   text-decoration: underline;
 }
+@media only screen and (max-width: 767px) {
+  .post .post-title h1 {
+    font-size: 22px;
+  }
+}
 .post .post-title h2 {
   line-height: 24px;
   margin-bottom: 15px;
@@ -1560,14 +1565,10 @@ label span {
   font-size: 16px;
 }
 .post .post-gallery img {
-  width: 100%;
   -webkit-transition: all 0.4s ease-in-out;
   -moz-transition: all 0.4s ease-in-out;
   -o-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
-}
-.single-post .post .post-gallery, .blog .post .post-gallery {
-  /*margin-bottom: 30px;*/
 }
 .relatedposts .post .post-gallery {
   /*margin-bottom: 20px;*/

@@ -1752,7 +1752,7 @@ label span {
 }
 @media only screen and (max-width: 767px) {
   .flex.homePageFlex {
-    display: none;
+    /*display: none;*/
   }
 }
 .flex.galleryFlex {

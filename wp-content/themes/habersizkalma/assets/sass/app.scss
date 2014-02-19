@@ -384,10 +384,9 @@ label {
 	}
 }
 #subheader {
-	display: block;
+	display: none;
 	background: $color1;
 	height: 40px;
-	line-height: 50px;
 	@extend .ubuntu;
 	
 	ul {
@@ -401,6 +400,11 @@ label {
 		}
 	}
 	
+	.row{
+		line-height: 38px;
+		text-transform: uppercase;
+	}
+
 	.social {
 		text-align: right;
 		
@@ -1701,7 +1705,7 @@ position: relative;
 
 	&.homePageFlex{
 		@media only screen and (max-width: $break-small) {
-			/*display: none;*/
+			
 		}
 	}
 

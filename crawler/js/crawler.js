@@ -11,7 +11,7 @@ tinymce.init({
 	function addToSite (guid) {
 		var row = $("tr[data-guid='"+guid+"']");
 		var title = row.find('.title').text();
-		var content = row.find(".content").val();
+		var content = tinyMCE.get('content-'+guid).getContent();
 		var image = row.find(".image").attr("href");
 		var tags = row.find(".tags").val();
 		var categoryIds = row.find("#cat").val().toString();

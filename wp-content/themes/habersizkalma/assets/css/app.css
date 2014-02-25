@@ -1758,6 +1758,16 @@ label span {
   width: 600px;
   margin: 0 auto;
 }
+.flex.galleryFlex .flex-control-nav {
+  height: 32px;
+  width: 100%;
+  top: 90%;
+  z-index: 99;
+  margin-top: 43px;
+  background-color: #D3D3D3;
+  border-radius: 15px;
+  opacity: 0.9;
+}
 .flex.categoryslider {
   margin-bottom: 30px;
 }

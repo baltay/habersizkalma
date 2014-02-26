@@ -22,7 +22,7 @@
 		  		<!--
 		  		
 		  		-->
-		  		<li>&nbsp; <?php echo get_the_date('F j, Y'); ?></li>
+		  		<!--<li>&nbsp; <?php echo get_the_date('F j, Y'); ?></li>-->
 		  		<!-- Start Share -->
 		  		<?php
 		  			if(get_the_author_meta("wp_user_level")==2)

@@ -51,6 +51,15 @@ define('SECURE_AUTH_SALT', '|VH!`l x{nQczuZth!KCym|)YF3l=mQ1-tMrOP1-E3wcT(94<XKK
 define('LOGGED_IN_SALT',   '$0OLTm_Ej5@{zQbmsP3k[%b7[g@->^b-qQ-jHT>+XeV3|rma(+Dc<-y%%BV)QuuQ');
 define('NONCE_SALT',       'mzfZ6rd[PDeX=tj &|(x>U:5;#HLI m9!/(<sfJo?8V7I^^#nC[cKBYv{4>X8B+i');
 
+define('FS_METHOD', 'ftpext');
+define('FTP_BASE', '/var/www');
+define('FTP_CONTENT_DIR', '/var/www/wp-content/');
+define('FTP_PLUGIN_DIR ', '/var/www/wp-content/plugins/');
+define('FTP_USER', 'root');
+define('FTP_PASS', 'rpqogpvdaizz');
+define('FTP_HOST', '188.226.134.201');
+define('FTP_SSL', true);
+
 /**#@-*/
 
 /**

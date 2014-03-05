@@ -319,8 +319,8 @@
 							animationSpeed: 0,
 							useCSS: false,
 							startAt: startIndex,
-							prevText: '<i class="fa fa-angle-left"></i>',
-							nextText: '<i class="fa fa-angle-right"></i>',
+							prevText: '<i class="fa fa-long-arrow-left"></i>',
+							nextText: '<i class="fa fa-long-arrow-right"></i>',
 							after: function(c){
 								if(afterCallback!=undefined)
 									window[afterCallback]( c, eval(afterCallback) );

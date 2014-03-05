@@ -93,17 +93,28 @@ class Display_Authors_Widget extends WP_Widget {
 			foreach ( $users as $author ) :
 			/* Get the author ID. */
 				$id = $author->ID;
-				
+
+				$today = getdate();
 				$args = array(
 				    'author' => $id,
-					  'showposts' => 1,
-					  'caller_get_posts' => 1
+				     'showposts' => 1,
+				     'caller_get_posts' => 1,
+				     'date_query' => array(
+							array(
+								'after' => '2 week ago',
+								'before' => 'today'
+							),
+						),
 				    );
 			    $my_query = new WP_Query($args);
+
 
 				
 			do_action( 'display_authors_widget_before' ); // action hook display_authors_widget_before
 			
+			?>
+			<?php 
+				if( $my_query->have_posts() ){
 			?>
 
 				<div id="hcard-<?php echo str_replace( ' ', '-', get_the_author_meta( 'user_nicename', $id ) ); ?>" class="author-profile vcard clear">
@@ -146,7 +157,6 @@ class Display_Authors_Widget extends WP_Widget {
 						echo wpautop( get_the_author_meta( 'description', $id ) );
 
 
-
 						//echo wpautop("<a href='".get_permalink($array_content[0])."'>".$array_content[1]."</a>");
 					    if( $my_query->have_posts() ) {
 					    	while ($my_query->have_posts()) : $my_query->the_post(); ?>
@@ -157,6 +167,9 @@ class Display_Authors_Widget extends WP_Widget {
 					?>
 
 				</div><!-- .author-profile .vcard -->
+			<?php
+				}
+			?>
 			
 			<?php do_action( 'display_authors_widget_after' ); // action hook display_authors_widget_after ?>
 			

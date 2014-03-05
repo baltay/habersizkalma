@@ -20,10 +20,11 @@
 	?>
 	<?php 
 		if(ot_get_option('boxed') == 'yes') { 
-			$class[0] = 'boxed';
+			$class[0] = 'boxed'; 
 	 	} else { $class[1] = ''; }
 	?>
 	<?php wp_localize_script( 'app', 'themeajax', array( 'url' => admin_url( 'admin-ajax.php' ) ) ); ?>
+	<script src="http://www.dovizfiyat.com/dovizjson/serbest/serbestKur/" type="text/javascript"></script>
 </head>
 <body <?php body_class($class); ?> data-url="<?php echo home_url(); ?>">
 <div id="wrapper">
@@ -31,10 +32,32 @@
 
 <div id="subheader">
 	<div class="row">
-		<div class="four columns hide-for-small">
+		<div class="twelve columns">
 			<div class="doviz">
-				asdasdasdasd
+				<script>
+					document.write("<a href='#'>Dolar: " + serbestKur.usdSat + "</a>");
+					document.write("<a href='#'>Euro: " + serbestKur.eurSat + "</a>");
+				</script> 
 			</div>
+			<div class="social">
+				<a href="https://www.facebook.com/habersizkalmaorg" class="boxed-icon facebook icon-1x rounded"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/HabersizKalmawb" class="boxed-icon twitter icon-1x rounded"><i class="fa fa-twitter"></i></a>
+			</div>
+
+			<div class="links">
+				<a href="iletisim/">İLETİŞİM</a>
+				<a href="kunye/">KÜNYE</a>
+				<a href="feed/">SİTENE EKLE</a>
+			</div>
+			
+			<div class="search">
+				<form id="searchform" action="">
+					<fieldset>
+						<input name="s" type="text" id="s" placeholder="Ara" class="">
+					</fieldset>
+				</form>
+			</div>
+
 		</div>
 	</div>
 	

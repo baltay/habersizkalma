@@ -7,7 +7,7 @@ body {
 }
 body div, body dl, body dt, body dd, body ul, body ol, body li, body pre, body form, body p, body blockquote, body th, body td {
   font-size: inherit;
-  font-family: inherit;
+  font-family: niherit;
 }
 body p {
   font-style: normal;
@@ -42,7 +42,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Re-usable styles */
 .ubuntu, .btn,
-input[type=submit], label, #subheader, #mobile-menu, #header, #nav, #nav nav > ul > li .category-holder > ul li a, #nav nav > ul > li .category-holder .category-children > div .gotocategory, #breaking h3, #breaking .item .type, #breadcrumbs, .carousel .post.back .post-title .readmore, #recentnews #loadmore, .post .post-title aside, .post .post-gallery .imagetag, .post .post-meta ul li, .post .post-content h4, .post .post-content h6, .post .single-meta .author strong, .post .single-meta .meta-list, [class^="tag-link"], .headline h2, .categoryheadline h2, .categoryheadline span, .archiveheadline h1, .pagenavi ul li a, .pagenavi .pages, .widget h6, .widget h6.force, .widget.widget_calendar table, .widget.widget_socialcounter, .widget.widget_latestreviews li aside, .sharethispost .sharenow, .sharethispost .btn-face-share, .label, .wp-caption .wp-caption-text, #endpage-box aside a, table, .seperator > h6, .tabs, ul.accordion > li > div.title h5, .toggle .title, div.notification-box h6, [data-hint]:after, #comments .headline a, #comments #reply-title, #comments ol.commentlist .commentmeta strong, #comments ol.commentlist .commentmeta .authorname, #comments ol.commentlist .comment-reply-link, #footer, #subfooter, #author-page strong a {
+input[type=submit], label, #searchform fieldset input, #subheader, #subheader .doviz a, #subheader .links a, #mobile-menu, #header, #nav, #nav nav > ul > li.smallmenu .extendmenu a, #nav nav > ul > li > a, #nav nav > ul > li .category-holder > ul li a, #nav nav > ul > li .category-holder .category-children > div .gotocategory, #breaking h3, #breaking .item .type, #breadcrumbs, .carousel .post.back .post-title .readmore, #recentnews #loadmore, .post .post-title aside, .post .post-gallery .imagetag, .post .post-meta ul li, .post .post-content h4, .post .post-content h6, .post .single-meta .author strong, .post .single-meta .meta-list, [class^="tag-link"], .headline h2, .categoryheadline h2, .categoryheadline span, .archiveheadline h1, .pagenavi ul li a, .pagenavi .pages, .widget h6, .widget h6.force, .widget.widget_calendar table, .widget.widget_socialcounter, .widget.widget_latestreviews li aside, .sharethispost .sharenow, .sharethispost .btn-face-share, .label, .wp-caption .wp-caption-text, #endpage-box aside a, table, .seperator > h6, .tabs, ul.accordion > li > div.title h5, .toggle .title, div.notification-box h6, [data-hint]:after, #comments .headline a, #comments #reply-title, #comments ol.commentlist .commentmeta strong, #comments ol.commentlist .commentmeta .authorname, #comments ol.commentlist .comment-reply-link, #footer, #subfooter, #author-page strong a {
   font-family: 'Ubuntu', sans-serif;
   font-weight: 400;
 }
@@ -451,13 +451,15 @@ label span {
   padding-right: 45px;
   margin-bottom: 0;
   font-size: 13px;
+  background-color: #000;
+  color: #fff;
 }
 #searchform fieldset:before {
   display: block;
   font-size: 20px;
   content: "\f002";
   position: absolute;
-  top: 10px;
+  top: 3px;
   right: 10px;
   font-weight: 400;
   font-family: 'FontAwesome';
@@ -478,7 +480,7 @@ label span {
 }
 
 #subheader {
-  display: none;
+  display: block;
   background: #222222;
   height: 40px;
 }
@@ -489,12 +491,52 @@ label span {
   font-size: 12px;
   text-transform: uppercase;
 }
+#subheader .doviz {
+  display: inline-block;
+}
+#subheader .doviz a {
+  color: #fff;
+  padding-right: 15px;
+}
+#subheader .doviz a:hover {
+  color: #2795b6;
+}
+#subheader .links {
+  display: inline-block;
+  float: right;
+}
+#subheader .links a {
+  color: #fff;
+  padding-right: 15px;
+}
+#subheader .links a:hover {
+  color: #2795b6;
+}
+@media only screen and (max-width: 767px) {
+  #subheader .links {
+    display: none;
+    visibility: hidden;
+  }
+}
+#subheader .search {
+  display: inline-block;
+  float: right;
+  margin-right: 20px;
+}
+@media only screen and (max-width: 767px) {
+  #subheader .search {
+    display: none;
+    visibility: hidden;
+  }
+}
 #subheader .row {
   line-height: 38px;
   text-transform: uppercase;
 }
 #subheader .social {
   text-align: right;
+  float: right;
+  display: inline-block;
 }
 #subheader .social a {
   display: inline-block;
@@ -1755,7 +1797,7 @@ label span {
   background: #2c2c2c url("../img/flex-preloader.gif") center center no-repeat;
 }
 .flex.galleryFlex {
-  width: 600px;
+  width: 64%;
   margin: 0 auto;
 }
 .flex.galleryFlex .flex-control-nav {
@@ -1767,6 +1809,11 @@ label span {
   background-color: #D3D3D3;
   border-radius: 15px;
   opacity: 0.9;
+}
+@media only screen and (max-width: 767px) {
+  .flex.galleryFlex {
+    width: 100%;
+  }
 }
 .flex.categoryslider {
   margin-bottom: 30px;
@@ -1815,30 +1862,22 @@ label span {
   position: absolute;
   display: block;
   top: 30px;
-  width: 34px;
-  height: 34px;
+  width: 40px;
+  height: 40px;
   margin: 0;
   background: rgba(255, 255, 255, 0.4);
   font-family: 'FontAwesome';
   color: rgba(0, 0, 0, 0.4);
   text-indent: 0;
   font-size: 18px;
-  line-height: 34px;
+  line-height: 40px;
   text-align: center;
   z-index: 100;
-  -webkit-border-radius: 17px;
-  -moz-border-radius: 17px;
-  -ms-border-radius: 17px;
-  -o-border-radius: 17px;
-  border-radius: 17px;
-  -webkit-transition: left 0.4s ease-in-out, right 0.4s ease-in-out, background 0.2s ease-in-out;
-  -moz-transition: left 0.4s ease-in-out, right 0.4s ease-in-out, background 0.2s ease-in-out;
-  -o-transition: left 0.4s ease-in-out, right 0.4s ease-in-out, background 0.2s ease-in-out;
-  transition: left 0.4s ease-in-out, right 0.4s ease-in-out, background 0.2s ease-in-out;
+  /*@include transition(left 0.4s ease-in-out, right 0.4s ease-in-out, background 0.2s ease-in-out);*/
 }
 .flex .flex-direction-nav a:hover {
-  background: #fff;
-  color: rgba(0, 0, 0, 0.85);
+  background: #17b3e6;
+  color: #fff;
 }
 @media only screen and (max-width: 767px) {
   .flex .flex-direction-nav a {
@@ -1846,29 +1885,30 @@ label span {
   }
 }
 .flex .flex-direction-nav .flex-prev {
-  left: 10px;
+  left: 0px;
   right: 50%;
-  top: 50%;
-}
-@media only screen and (max-width: 767px) {
-  .flex .flex-direction-nav .flex-prev {
-    left: auto;
-    right: 65px;
-    top: 25px;
-  }
+  top: 48%;
+  			/*
+  			@media only screen and (max-width: $break-small) {
+  				left: auto;
+  				right: 65px;
+  				top: 25px;
+  			}
+  
+  			*/
 }
 .flex .flex-direction-nav .flex-prev i {
   padding-right: 2px;
 }
 .flex .flex-direction-nav .flex-next {
-  right: 10px;
-  top: 50%;
-}
-@media only screen and (max-width: 767px) {
-  .flex .flex-direction-nav .flex-next {
-    right: 25px;
-    top: 25px;
+  right: 0px;
+  top: 48%;
+  /*
+  @media only screen and (max-width: $break-small) {
+   right: 25px;
+   top: 25px;
   }
+  */
 }
 .flex .flex-direction-nav .flex-next i {
   padding-left: 2px;
@@ -1930,6 +1970,11 @@ label span {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
   z-index: 99;
+}
+@media only screen and (max-width: 767px) {
+  .flex .flex-active-slide .post-gallery a {
+    display: none;
+  }
 }
 
 .galleryOldSlider img {

@@ -20,7 +20,7 @@ body {
 	font-weight: 400;
 	div, dl, dt, dd, ul, ol, li, pre, form, p, blockquote, th, td {
 		font-size: inherit;
-		font-family: inherit;
+		font-family: niherit;
 	}
 	p {
 		font-style: normal;
@@ -359,13 +359,16 @@ label {
 			padding-right: 45px;
 			margin-bottom: 0;
 			font-size: 13px;
+			background-color: #000;
+			color: #fff;
+			@extend .ubuntu;
 		}
 		&:before {
 		  display: block;
 		  font-size: 20px;
 		  content: "\f002";
 		  position: absolute;
-		  top: 10px;
+		  top: 3px;
 		  right: 10px;
 		  font-weight: 400;
 		  font-family: 'FontAwesome';
@@ -384,11 +387,12 @@ label {
 	}
 }
 #subheader {
-	display: none;
+	display: block;
 	background: $color1;
 	height: 40px;
-	@extend .ubuntu;
 	
+	@extend .ubuntu;
+
 	ul {
 		list-style: none;
 		@extend .reset;
@@ -399,14 +403,57 @@ label {
 			}
 		}
 	}
+
+	.doviz{
+		display: inline-block;
+		a{
+			color: #fff;
+			padding-right: 15px;
+			&:hover{
+				color: #2795b6;
+			}
+			@extend .ubuntu;
+		}
+	}
+
+	.links{
+		display: inline-block;
+		float: right;
+		a{
+			color: #fff;
+			padding-right: 15px;
+			&:hover{
+				color: #2795b6;
+			}
+			@extend .ubuntu;
+
+		}
+		@media only screen and (max-width: $break-small) {
+			  display: none;
+			  visibility: hidden;
+		}
+	}
+
+	.search{
+		display: inline-block;
+		float: right;
+		margin-right: 20px;
+		@media only screen and (max-width: $break-small) {
+			  display: none;
+			  visibility: hidden;
+		}
+	}
 	
 	.row{
 		line-height: 38px;
 		text-transform: uppercase;
 	}
 
+
 	.social {
 		text-align: right;
+		float: right;
+		display: inline-block;
 		
 		a {
 			display: inline-block;
@@ -449,9 +496,11 @@ label {
 			&.tumblr:hover {
 				background: #253b50;
 			}
+			
 			@media only screen and (max-width: $break-small) {
 			  margin-left: 0;
 			}
+
 		}
 	}
 }
@@ -783,6 +832,7 @@ label {
 							&:hover {
 								color: #fff;
 							}
+							@extend .ubuntu;
 						}
 					}
 				}
@@ -805,6 +855,7 @@ label {
 						border-color: $color1;
 						color: #fff;
 					}
+					@extend .ubuntu;
 				}
 				.category-holder {
 					position: absolute;
@@ -1710,7 +1761,7 @@ position: relative;
 	}
 
 	&.galleryFlex{
-		width: 600px;
+		width: 64%;
 		margin: 0 auto;
 		.flex-control-nav{
 			height: 32px;
@@ -1721,6 +1772,9 @@ position: relative;
 			background-color: #D3D3D3;
 			border-radius: 15px;
 			opacity: 0.9;
+		}
+		@media only screen and (max-width: $break-small) {
+			width: 100%;
 		}
 	}
 
@@ -1777,23 +1831,22 @@ position: relative;
 			position: absolute;
 			display: block;
 			top: 30px;
-			width: 34px;
-			height: 34px;
+			width: 40px;
+			height: 40px;
 			margin: 0;
 			background: rgba(255,255,255,0.4);
 			font-family: 'FontAwesome';
 			color: rgba(0,0,0,0.4);
 			text-indent: 0;
 			font-size: 18px;
-			line-height: 34px;
+			line-height: 40px;
 			text-align: center;
 			z-index: 100;
-			@include border-radius(17px);
-			@include transition(left 0.4s ease-in-out, right 0.4s ease-in-out, background 0.2s ease-in-out);
+			/*@include transition(left 0.4s ease-in-out, right 0.4s ease-in-out, background 0.2s ease-in-out);*/
 			
 			&:hover {
-				background: #fff;
-				color: rgba(0,0,0,0.85);
+				background: $color4;
+				color: #fff;
 			}
 			
 			@media only screen and (max-width: $break-small) {
@@ -1801,28 +1854,30 @@ position: relative;
 			}
 		}
 		.flex-prev {
-			left: 10px;
+			left: 0px;
 			right: 50%;
-			top: 50%;
-
+			top: 48%;
+			/*
 			@media only screen and (max-width: $break-small) {
 				left: auto;
 				right: 65px;
 				top: 25px;
 			}
+
+			*/
 			i {
 				padding-right: 2px;
 			}
 		}
 		.flex-next {
-			right: 10px;
-			top: 50%;
-			
+			right: 0px;
+			top: 48%;
+			/*
 			@media only screen and (max-width: $break-small) {
 			 right: 25px;
 			 top: 25px;
 			}
-			
+			*/
 			i {
 				padding-left: 2px;
 			}
@@ -1883,6 +1938,14 @@ position: relative;
 		.post-meta {
 			@include opacity(1);
 			z-index: 99;
+		}
+		.post-gallery{
+			a{
+				@media only screen and (max-width: $break-small) {
+					display: none;
+				}
+				
+			}
 		}
 	}
 }

@@ -62,7 +62,10 @@ Template Name: Home Page - Style 1
 				<?php if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post(); ?>
 				<li class="post">
 					<div class="post-gallery">
-						<a href="<?php the_permalink() ?>" rel="bookmark"><?php the_post_thumbnail('slider'); ?><div class="overlay"></div></a>
+						<?php the_post_thumbnail('slider'); ?>
+						<a href="<?php the_permalink() ?>" rel="bookmark">
+							<div class="overlay"></div>
+						</a>
 					</div>
 					<div class="post-title">
 						<aside><?php echo thb_DisplaySingleCategory(); ?></aside>

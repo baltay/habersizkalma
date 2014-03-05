@@ -10,9 +10,24 @@
 
 
 <div class="galleryOldSlider">
-	<a href='<?php echo get_post_permalink()."&imgId=".($imageIndexId+1) ?>'>
-		<img src="<?php echo wp_get_attachment_image_src($attachment_array[$imageIndexId],'full')[0]; ?>"/>
-	</a>
+		<?php 
+			$imageArr = wp_get_attachment_image_src($attachment_array[$imageIndexId],'full') ;
+			if(count($attachment_array)!=$imageIndexId+1){
+				echo '<a href="'.get_post_permalink().'&imgId='.($imageIndexId+1).'">';				
+				echo "<img src='".$imageArr[0]."' />";
+				echo '</a>';
+			}else{
+				$postId = $post->ID;
+        		$query = get_blog_posts_related_by_category($post->ID);
+        		if ($query->have_posts()){
+        			$nextid = $query->posts[0]->ID;
+        			echo '<a href="'.get_permalink($nextid).'">';
+					echo "<img src='".$imageArr[0]."' />";
+					echo '</a>';
+        		}
+				
+			}
+		?>
 	<div class="galleryNumber">
 		<ul>
 			<?php 
@@ -22,9 +37,11 @@
 					if($imageIndexId==$atKey)
 					{
 						echo "<li class='active'><a href='".get_post_permalink()."&imgId=".$atKey."'>".($atKey+1)."</a></li>";
-					}else{
+					}
+					else{
 						echo "<li><a href='".get_post_permalink()."&imgId=".$atKey."'>".($atKey+1)."</a></li>";
-					}	
+					}
+					
 					$c++;					
 					if($c==25){
 						$c=0;
